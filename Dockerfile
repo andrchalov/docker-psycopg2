@@ -1,6 +1,7 @@
 
-FROM alpine:latest
+FROM python:alpine
 
-RUN apk -U --no-cache add python3 py-psycopg2
+RUN pip install psycopg2
+RUN pip install raven
 
 CMD /usr/bin/python3
